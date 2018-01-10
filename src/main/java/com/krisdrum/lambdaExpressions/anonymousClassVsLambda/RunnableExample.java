@@ -1,4 +1,4 @@
-package com.krisdrum.lambdaExpressions.AnonymousClass;
+package com.krisdrum.lambdaExpressions.anonymousClassVsLambda;
 
 public class RunnableExample {
     Runnable r = new Runnable() {

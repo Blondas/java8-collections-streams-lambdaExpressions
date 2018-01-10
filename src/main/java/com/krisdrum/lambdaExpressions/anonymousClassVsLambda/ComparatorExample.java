@@ -1,4 +1,4 @@
-package com.krisdrum.lambdaExpressions.AnonymousClass;
+package com.krisdrum.lambdaExpressions.anonymousClassVsLambda;
 
 import java.util.Comparator;
 
@@ -9,6 +9,6 @@ public class ComparatorExample {
         }
     };
 
-    Comparator<String> comparator2 = (String s1, String s2) ->
+    Comparator<String> comparator2 = (s1, s2) ->
             Integer.compare(s1.length(), s2.length());
 }
