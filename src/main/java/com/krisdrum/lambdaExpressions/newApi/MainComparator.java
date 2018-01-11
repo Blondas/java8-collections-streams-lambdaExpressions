@@ -6,7 +6,7 @@ import java.util.function.Function;
 
 public class MainComparator {
     public static void main(String[] args) {
-//         Comparator written using lambda expression
+        // Comparator written using lambda expression
         Comparator<Person> cmpAge = (p1, p2) -> p1.getAge() - p2.getAge();
         Comparator<Person> cmpFirstName = (p1, p2) -> p1.getFirstName().compareTo(p2.getFirstName());
         Comparator<Person> cmpLastName = (p1, p2) -> p1.getLastName().compareTo(p2.getLastName());
