@@ -1,4 +1,4 @@
-package dataProcessingUsingLambdasAndCollectionFramework.notes;
+package com.krisdrum.dataProcessingUsingLambdasAndCollectionFramework.notes;
 
 
 import java.util.ArrayList;

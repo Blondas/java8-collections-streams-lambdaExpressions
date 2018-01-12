@@ -1,18 +1,18 @@
-package dataProcessingUsingLambdasAndCollectionFramework.notes;
+package com.krisdrum.dataProcessingUsingLambdasAndCollectionFramework.notes;
 
+import com.krisdrum.dataProcessingUsingLambdasAndCollectionFramework.Fixtures;
 import com.krisdrum.lambdaExpressions.commonHelperClasses.City;
-import dataProcessingUsingLambdasAndCollectionFramework.Person;
+import com.krisdrum.dataProcessingUsingLambdasAndCollectionFramework.Person;
 import java.util.*;
-import static dataProcessingUsingLambdasAndCollectionFramework.Fixtures.*;
 
 public class Maps {
     public static void main(String[] args) {
         Map<City, List<Person>> map = new HashMap<>();
-        map.put(krakow, citizenK);
-        map.put(warszawa, citizenW);
+        map.put(Fixtures.krakow, Fixtures.citizenK);
+        map.put(Fixtures.warszawa, Fixtures.citizenW);
 
         City poznan = new City("Poznan");
-        List<Person> citizenP = new ArrayList<>(Arrays.asList(erica));
+        List<Person> citizenP = new ArrayList<>(Arrays.asList(Fixtures.erica));
 
         // Map.forEach()
 //        map.forEach((city, list) -> System.out.println(city.getName() + ": " + list.size() + " people"));
@@ -68,7 +68,7 @@ public class Maps {
 
         // Map.merge()
         map.merge(
-                krakow,
+                Fixtures.krakow,
                 citizenP,
                 (oldValue, newValue) -> {
                     oldValue.addAll(newValue);

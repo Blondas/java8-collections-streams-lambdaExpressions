@@ -1,8 +1,8 @@
-package dataProcessingUsingLambdasAndCollectionFramework.liveCoding;
+package com.krisdrum.dataProcessingUsingLambdasAndCollectionFramework.liveCoding;
 
 
 import com.krisdrum.lambdaExpressions.commonHelperClasses.City;
-import dataProcessingUsingLambdasAndCollectionFramework.Person;
+import com.krisdrum.dataProcessingUsingLambdasAndCollectionFramework.Person;
 
 import java.util.*;
 

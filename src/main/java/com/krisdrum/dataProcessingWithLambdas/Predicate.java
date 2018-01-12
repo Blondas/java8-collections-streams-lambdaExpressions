@@ -1,4 +1,4 @@
-package dataProcessingWithLambdas;
+package com.krisdrum.dataProcessingWithLambdas;
 
 @FunctionalInterface
 public interface Predicate<T> {

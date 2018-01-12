@@ -1,4 +1,4 @@
-package dataProcessingUsingLambdasAndCollectionFramework;
+package com.krisdrum.dataProcessingUsingLambdasAndCollectionFramework;
 
 import com.krisdrum.lambdaExpressions.commonHelperClasses.City;
 

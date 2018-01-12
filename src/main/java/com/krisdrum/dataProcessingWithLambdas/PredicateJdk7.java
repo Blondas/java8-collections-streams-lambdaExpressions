@@ -1,4 +1,4 @@
-package dataProcessingWithLambdas;
+package com.krisdrum.dataProcessingWithLambdas;
 
 import java.util.function.Predicate;
 

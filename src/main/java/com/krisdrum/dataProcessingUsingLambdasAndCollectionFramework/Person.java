@@ -1,4 +1,4 @@
-package dataProcessingUsingLambdasAndCollectionFramework;
+package com.krisdrum.dataProcessingUsingLambdasAndCollectionFramework;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
