@@ -15,7 +15,8 @@ public class Merge {
         map2.forEach(
                 (key, value) ->
                         map1.merge(
-                                key, value,
+                                key,
+                                value,
                                 (existingPeope, newPeople) -> {
                                     existingPeope.addAll(newPeople);
                                     return existingPeope;
