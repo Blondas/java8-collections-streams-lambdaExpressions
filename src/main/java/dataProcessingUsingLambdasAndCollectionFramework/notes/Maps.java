@@ -45,12 +45,26 @@ public class Maps {
 //                poznan,
 //                (city, people) -> city.getName().equals("Krakow")? citizenK : Collections.emptyList()
 //                );
-        map.compute(
-                krakow,
-                (city, people) -> people
-        );
-        System.out.println(map);
+//        map.compute(
+//                krakow,
+//                (city, people) -> people
+//        );
+//        System.out.println(map);
 
+        // Map.compute*() to build Map od Map:
+//        Map<String, Map<String, Person>> mapOfMap = new HashMap<>();
+//        mapOfMap.computeIfAbsent(
+//                "one",
+//                key -> new HashMap<>()
+//        ).put("two", alice);
+//        System.out.println(mapOfMap);
+
+        Map<String, List<Person>> map2 = new HashMap<>();
+        map2.computeIfAbsent(
+                "one",
+                key -> new ArrayList<Person>()
+        ).add(francesco);
+        System.out.println(map2);
     }
 
 }
