@@ -12,7 +12,7 @@ public class Maps {
         map.put(warszawa, citizenW);
 
         City poznan = new City("Poznan");
-        List<Person> citizenP = new ArrayList<>(Arrays.asList(alice));
+        List<Person> citizenP = new ArrayList<>(Arrays.asList(erica));
 
         // Map.forEach()
 //        map.forEach((city, list) -> System.out.println(city.getName() + ": " + list.size() + " people"));
@@ -59,12 +59,23 @@ public class Maps {
 //        ).put("two", alice);
 //        System.out.println(mapOfMap);
 
-        Map<String, List<Person>> map2 = new HashMap<>();
-        map2.computeIfAbsent(
-                "one",
-                key -> new ArrayList<Person>()
-        ).add(francesco);
-        System.out.println(map2);
+//        Map<String, List<Person>> map2 = new HashMap<>();
+//        map2.computeIfAbsent(
+//                "one",
+//                key -> new ArrayList<Person>()
+//        ).add(francesco);
+//        System.out.println(map2);
+
+        // Map.merge()
+        map.merge(
+                krakow,
+                citizenP,
+                (oldValue, newValue) -> {
+                    oldValue.addAll(newValue);
+                    return  oldValue;
+                }
+        );
+        System.out.println(map);
     }
 
 }
