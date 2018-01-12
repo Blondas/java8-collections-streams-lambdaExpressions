@@ -33,5 +33,37 @@ public class MainAPICollectionMap {
         population.computeIfAbsent(paris, city -> new ArrayList<>()).add(p2);
         System.out.println(population);
 
+
+        // merge()
+        Map<City, List<Person>> population2 = new HashMap<>();
+        Map<City, List<Person>> population3 = new HashMap<>();
+
+        population2.computeIfAbsent(newYork, city -> new ArrayList<>()).add(p1);
+        population2.computeIfAbsent(shanghai, city -> new ArrayList<>()).add(p2);
+        population2.computeIfAbsent(shanghai, city -> new ArrayList<>()).add(p3);
+
+        population3.computeIfAbsent(shanghai, city -> new ArrayList<>()).add(p4);
+        population3.computeIfAbsent(paris, city -> new ArrayList<>()).add(p5);
+        population3.computeIfAbsent(paris, city -> new ArrayList<>()).add(p6);
+
+        System.out.println("population2");
+        population2.forEach((city, people) -> System.out.println(city + " : " + people));
+
+        System.out.println("populetion3");
+        population3.forEach((city, people) -> System.out.println(city + " : " + people));
+
+        population3.forEach(
+                ((city, people) -> population2.merge(
+                        city,
+                        people,
+                        (peopleFromPop2, peopleFromPop3) -> {
+                            peopleFromPop2.addAll(peopleFromPop3);
+                            return peopleFromPop2;
+                        }
+                ))
+        );
+
+        System.out.println("population2 + 3");
+        population2.forEach((city, people) -> System.out.println(city + " : " + people));
     }
 }
