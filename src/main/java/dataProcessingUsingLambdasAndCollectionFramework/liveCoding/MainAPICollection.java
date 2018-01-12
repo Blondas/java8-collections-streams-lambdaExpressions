@@ -1,5 +1,7 @@
-package dataProcessingUsingLambdasAndCollectionFramework;
+package dataProcessingUsingLambdasAndCollectionFramework.liveCoding;
 
+
+import dataProcessingUsingLambdasAndCollectionFramework.Person;
 
 import java.util.ArrayList;
 import java.util.Arrays;
