@@ -25,5 +25,13 @@ public class MainAPICollectionMap {
         List<Person> popPar = population.getOrDefault(paris, Collections.emptyList());
         System.out.println(popPar);
 
+        // putIfAbsent()
+        population.putIfAbsent(paris, new ArrayList<>());
+        population.get(paris).add(p1);
+
+        // computeIfAbsent()
+        population.computeIfAbsent(paris, city -> new ArrayList<>()).add(p2);
+        System.out.println(population);
+
     }
 }
